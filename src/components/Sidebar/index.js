@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import CityList from './CityList';
-import styles from './index.css';
+import CityList from '../CityList/index';
+import styles from './Sidebar.css';
+
 import API  from "../../api/openweathermap/index";
+
 class Sidebar extends Component {
   addCity = async event => {
     event.preventDefault();
@@ -15,7 +17,7 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <form onSubmit={this.addCity} action="#" className={styles.form}>
           <input type="text" ref={input => this.input = input}/>
         </form>

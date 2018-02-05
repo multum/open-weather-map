@@ -13,8 +13,7 @@ import reduxThunk from 'redux-thunk';
 
 import reducer from './reducets/reducers';
 import Sidebar from './components/Sidebar/index';
-import styles from './App.css';
-
+import styles from './App.sass';
 
 const logMiddleware = store => next => action => {
   console.debug(action);
@@ -33,7 +32,9 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Sidebar className={styles.sidebar}/>
+        <main className={styles.wrap}>
+          <Sidebar/>
+        </main>
       </Provider>
     );
   }

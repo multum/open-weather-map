@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 class CityList extends Component {
   render() {
-    console.log(this.props.cities);
     return (
       <ul>
         {this.props.cities.map(city => {
