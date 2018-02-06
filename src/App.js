@@ -7,12 +7,12 @@ import {
   applyMiddleware,
   compose
 } from 'redux'
-
-
 import reduxThunk from 'redux-thunk';
-
 import reducer from './reducets/reducers';
+
 import Sidebar from './components/Sidebar/index';
+import Details from './components/Details/index';
+
 import styles from './App.sass';
 
 const logMiddleware = store => next => action => {
@@ -34,6 +34,7 @@ class App extends Component {
       <Provider store={store}>
         <main className={styles.wrap}>
           <Sidebar/>
+          <Details/>
         </main>
       </Provider>
     );

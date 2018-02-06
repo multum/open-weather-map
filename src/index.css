@@ -1,6 +1,9 @@
-@import './fonts/owfont-regular.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 @import './reset.css';
-body{
+@import './fonts/owfont-regular.scss';
+
+
+body {
   font-family: 'Montserrat';
+  min-width: 768px;
 }

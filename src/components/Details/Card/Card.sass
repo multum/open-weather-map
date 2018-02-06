@@ -1,0 +1,46 @@
+@import '../../../styles/variables'
+.container
+	width: 200px
+	min-width: calc(100% / 3 - 20px)
+	background: $blue300
+	box-shadow: 0 5px 10px rgba($blue900, .3)
+	border-left: 3px solid $blue600
+	box-sizing: border-box
+	margin: 10px
+	padding: 10px 20px
+	color: #fff
+	&>div
+		padding: 5px 0
+		letter-spacing: .05em
+	i
+		font-size: 30px
+		position: absolute
+		top: 50%
+		left: 0px
+		transform: translateY(-50%)
+.name
+	font-size: 24px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	position: relative
+	padding: 10px 0 10px 40px
+.weather
+	i
+.description
+	font-size: 10px
+.temperatureRange
+	display: flex
+	flex-flow: row wrap
+	font-size: .9em
+	&>*
+		flex-grow: 1
+	span
+		font-size: 1.2em
+.temperature
+	font-size: 1.2em
+	margin: 5px 0 15px
+	span
+		font-size: 1.5em
+.humidity
+	font-size: .8em

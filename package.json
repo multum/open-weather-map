@@ -2,7 +2,9 @@
   "name": "open-weather-map",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://zomboy.pe.hu/",
   "dependencies": {
+    "masonry-layout": "^4.2.1",
     "node-sass": "^4.7.2",
     "node-sass-chokidar": "0.0.3",
     "react": "^16.2.0",
@@ -24,6 +26,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.2",
     "precss": "^3.1.0"
   }
 }

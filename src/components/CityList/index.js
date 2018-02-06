@@ -5,15 +5,25 @@ import styles from './CityList.css';
 class CityList extends Component {
   render() {
     return (
-      <ul>
-        {this.props.cities.map(city => {
-          return <li key={city.id} className={styles.item} onClick={this.props.removeCity.bind(this, city.id)}>
-            {city.name}
-            <button>x</button>
-          </li>;
-        })}
-      </ul>
-    );
+      this.props.cities.length ?
+        <div className={styles.container}>
+          <h3>Cities:</h3>
+          <ul>
+            {this.props.cities.map(city => {
+              return <li key={city.id} className={styles.item} onClick={this.props.removeCity.bind(this, city.id)}>
+                {city.name}
+                {city.currentGeoLocation ?
+                  <strong> (your location)</strong>
+                  : ''}
+                <button>x</button>
+              </li>;
+            })}
+          </ul>
+        </div>
+        : ''
+
+    )
+      ;
   }
 }
 

@@ -1,13 +1,20 @@
+.container {
+  margin-top: 30px; }
+
 .item {
   background: rgba(255, 255, 255, 0.2);
   margin: 10px 0;
   padding: 10px 70px 10px 10px;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   position: relative;
-  color: #fff;
   font-size: 20px;
   cursor: pointer;
   transition: .3s; }
+  .item strong {
+    opacity: .6;
+    font-size: .8em; }
   .item:hover {
     background: rgba(255, 255, 255, 0.3); }
     .item:hover button:before, .item:hover button:after {

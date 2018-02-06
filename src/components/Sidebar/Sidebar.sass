@@ -1,5 +1,23 @@
 @import '../../styles/variables'
+.title
+	font-size: 30px
+	margin-bottom: 50px
 .form
+	display: flex
+	flex-flow: row nowrap
+	align-items: center
+	p
+		margin: 0 10px 0 20px
+	button
+		cursor: pointer
+		padding: 5px
+		background: none
+		outline: none
+		border: none
+		flex-shrink: 0
+		svg, img
+			width: 20px
+			height: 20px
 	input
 		width: 100%
 		box-sizing: border-box
@@ -16,6 +34,7 @@
 			color: red
 		&::placeholder
 			color: rgba(#fff, .5)
+
 .container
 	width: 400px
 	position: fixed
@@ -24,3 +43,4 @@
 	background: $blue600
 	padding: 30px 25px
 	height: 100%
+	color: #fff
