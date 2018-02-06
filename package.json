@@ -2,7 +2,7 @@
   "name": "open-weather-map",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://av-dev.github.io/open-weather-map/build/",
+  "homepage": ".",
   "dependencies": {
     "masonry-layout": "^4.2.1",
     "node-sass": "^4.7.2",
