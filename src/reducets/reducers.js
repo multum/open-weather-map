@@ -7,6 +7,12 @@ const cityReducer = function() {
     // ----------------------------------
     if (action.type === 'ADD_CITY') {
 
+      const include =  state.filter(city => {
+        return city.id === action.city.id;
+      });
+
+      if(include.length) return state;
+
       const newState = state.concat(action.city);
 
       window.localStorage.setItem('cities', JSON.stringify(newState));

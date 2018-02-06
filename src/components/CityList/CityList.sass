@@ -1,2 +1,49 @@
 @import '../../styles/variables'
 
+.item
+	background: rgba(#fff, .2)
+	margin: 10px 0
+	padding: 10px 70px 10px 10px
+	white-space: nowrap
+	position: relative
+	color: #fff
+	font-size: 20px
+	cursor: pointer
+	transition: .3s
+	&:hover
+		background: rgba(#fff, .3)
+		button:before, button:after
+			opacity: 1
+		button:before
+			transform: rotate(45deg)
+		button:after
+			transform: rotate(-45deg)
+	button
+		position: absolute
+		right: 0
+		top: 0
+		background: none
+		width: 50px
+		height: 100%
+		border: none
+		font-size: 20px
+		padding: 0
+		text-indent: -99999px
+		display: block
+		&:before, &:after
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 20px
+			height: 2px
+			margin: -2px 0 0 -10px
+			background: #ffffff
+			content: ''
+			transform-origin: 50% 50%
+			box-sizing: border-box
+			opacity: 0
+			transform: none
+			transition: .3s
+
+
+

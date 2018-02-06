@@ -9,9 +9,15 @@ class Sidebar extends Component {
   addCity = async event => {
     event.preventDefault();
 
-    const resolve = await API.forCity(this.input.value);
-    this.props.addCity(resolve);
-    this.input.value = '';
+    try {
+      const resolve = await API.forCity(this.input.value);
+      this.props.addCity(resolve);
+      this.input.value = '';
+    } catch (e) {
+      this.input.classList.add(styles.error)
+      setTimeout(() => this.input.classList.remove(styles.error), 300)
+    }
+
 
   };
 
@@ -19,7 +25,7 @@ class Sidebar extends Component {
     return (
       <div className={styles.container}>
         <form onSubmit={this.addCity} action="#" className={styles.form}>
-          <input type="text" ref={input => this.input = input}/>
+          <input type="text" placeholder='Write the city and press Enter' ref={input => this.input = input}/>
         </form>
         <CityList/>
       </div>

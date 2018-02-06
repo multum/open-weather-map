@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import styles from './CityList.css';
 
 class CityList extends Component {
   render() {
     return (
       <ul>
         {this.props.cities.map(city => {
-          return <li key={city.id}>
+          return <li key={city.id} className={styles.item} onClick={this.props.removeCity.bind(this, city.id)}>
             {city.name}
-            <button onClick={this.props.removeCity.bind(this, city.id)}>x</button>
+            <button>x</button>
           </li>;
         })}
       </ul>

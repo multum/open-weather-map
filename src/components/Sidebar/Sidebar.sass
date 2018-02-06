@@ -11,7 +11,11 @@
 		font-family: inherit
 		font-size: 20px
 		height: 50px
-
+		transition: .2s
+		&.error
+			color: red
+		&::placeholder
+			color: rgba(#fff, .5)
 .container
 	width: 400px
 	position: fixed
